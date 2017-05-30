@@ -1,0 +1,175 @@
+﻿/*
+body {
+	font-size:100%;
+	font-weight:lighter;
+	line-height:1.5em;
+}
+*/
+
+/* override global.css:1232 */
+.container {
+	padding-left:0px!important;
+	padding-right:0px!important;
+}
+#MAIN_homestat img {
+	width:unset;
+}
+
+#MAIN_homestat {
+	font-family:Arial, Helvetica, sans-serif;
+}
+#MAIN_homestat * {
+	line-height:1.5em;
+}
+
+#MAIN_homestat > header nav {
+	display:flex;
+	margin-bottom:1em;
+}
+#MAIN_homestat > header nav a {
+	font-size:.9em;
+	font-weight:bold;
+
+	margin-right:1em;
+	padding:.3em;
+}
+#MAIN_homestat > header nav a.A_current {
+	background-color:yellow;
+}
+
+
+#MAIN_homestat a {
+	text-decoration:underline;
+	color:#213D6D;
+	font-weight:bold;
+}
+#MAIN_homestat a:hover {
+	color:#034EA1;
+}
+
+#MAIN_homestat em {
+	font-weight:bold;
+	font-style:normal;
+}
+
+#MAIN_homestat section:first-of-type article {
+	margin-top:1.7em;
+	margin-bottom:1.7em;
+}
+#MAIN_homestat section:first-of-type article:first-of-type h1 {
+	color:black;
+}
+#MAIN_homestat section:first-of-type article h1 {
+	color:#034EA1;
+	line-height:1.4em;
+	margin-bottom:0px;
+	font-size:1.5em;
+}
+
+#MAIN_homestat section:first-of-type article p:first-of-type {
+	margin-top:0px;
+}
+#MAIN_homestat section:first-of-type article p {
+	margin-bottom:1em;
+}
+
+#MAIN_homestat section:first-of-type footer p a {
+	color:black;
+	font-size:1em;
+	font-weight:normal;
+}
+#MAIN_homestat section:first-of-type footer p a:hover {
+	color:#034EA1;
+	font-weight:bold;
+}
+
+
+#MAIN_homestat * {
+	line-height:1.2em;
+}
+
+
+#MAIN_homestat section footer {
+	background-color:initial;
+	padding:0px;
+}
+
+#MAIN_homestat section:first-of-type footer > a:last-of-type {
+	display:inline-block;
+	padding:.9em;
+	padding-bottom:.7em;
+	color:white;
+	background-color:#00B2E8;
+	border-radius:3px;
+	text-decoration:none;
+}
+#MAIN_homestat section:first-of-type footer > a:last-of-type:hover {
+	text-decoration:underline;
+}
+
+
+
+#MAIN_homestat section:last-of-type {
+	background-color:#00b2e8;
+	color:#25237A;
+	margin-top:4em;
+	padding:1.875em;
+}
+
+#MAIN_homestat section:last-of-type p {
+	font-size:1em;
+	margin-bottom:1em;
+}
+#MAIN_homestat section:last-of-type p a:hover {
+	color:white;
+}
+#MAIN_homestat section:last-of-type footer {
+	margin-top:1em;
+
+	display:flex;
+	flex-direction:row-reverse;
+	align-items:flex-end;
+}
+
+@media only screen and (max-width:600px) {
+	#MAIN_homestat section:last-of-type header h1 {
+		display:inline;
+	}
+}
+
+#MAIN_homestat section:last-of-type header {
+	color:white;
+	font-size:2em;
+	font-weight:bold;
+}
+#MAIN_homestat section:last-of-type header * {
+	line-height:.9em;
+}
+
+#MAIN_homestat section:last-of-type header a {
+	color:white;
+}
+#MAIN_homestat section:last-of-type header a:hover {
+	color:#25237A;
+}
+
+
+#MAIN_homestat section:last-of-type h1 {
+	font-size:1em;
+	color:#2F2279;
+	margin:0px;
+}
+#MAIN_homestat section:last-of-type h2 {
+	font-size:1.4em;
+	margin-top:1em;
+	margin-bottom:1em;
+	line-height:1.2em;
+}
+
+#MAIN_homestat section:last-of-type footer img:first-child {
+	height:2.25em;
+}
+#MAIN_homestat section:last-of-type footer img:last-child {
+	height:2.25em;	
+	margin-right:1em;
+}

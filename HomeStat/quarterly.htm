@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<title></title>
+<!--<base href="http://www1.nyc.gov/site/operations/projects/homestat/" />-->
+	
+	<!--REMOVE IN TEAMSITE-->
+	<link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<link href="Common.css"		rel="stylesheet" />	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+	<link href="Map.css"		rel="stylesheet" />	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+	<link href="Quarterly.css"	rel="stylesheet" />	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.2.min.js" type="text/javascript"></script>-->			<!--LATEST VERSION-->
+	<script src="https://www1.nyc.gov/assets/home/js/libs/jquery-1.9.1.js" type="text/javascript"></script>	<!--TEAMSITE VERSION-->
+	<!--TEAMSITE LOADS CARTO DIRECTLY FROM CDN-->
+	<!--
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+	<script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+	-->
+	<!--WHILE TESTING ON https://a002, A LOCAL COPY OF CARTO IS LOADED TO DEFEAT HTTPS=>HTTP CALLS-->
+	<link rel="stylesheet" href="cartodb.css" />
+	<script type="text/javascript" src="cartodb.js"></script>
+
+	<!--USED ONLY FOR FORMATTING THE DATE OF 311 SNAPSHOT-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script>
+
+		//0939b168-1e93-11e6-bbc8-0ea31932ec1d
+		var hs_cartoId = 'b620565e-c19b-40b9-9eca-4e286d34b78b';
+
+		var hs_data = {
+			quarter: "Fall 2016",
+			quarterStart: "Monday, November 7",
+			bronx: 132,
+			brooklyn: 111,
+			manhattan: 680,
+			queens: 40,
+			staten: 62,
+			train: 1713
+		};
+
+	</script>
+	<script src="Common.js" type="text/javascript"></script>	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+	<script src="Quarterly.js" type="text/javascript"></script>	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+</head>
+<body>
+	<main id="MAIN_homestat">
+
+		<header>
+			<h1>HOME-STAT</h1>
+			<img src="img/HomeStat.png" />
+			<nav>
+				<!--/site/operations/projects/homestat/-->
+				<span><a href="index.page">Home</a></span>
+				<span><a href="daily.page">Daily Dashboard</a></span>
+				<span><a href="weekly.page">Weekly Count</a></span>
+			</nav>
+			<nav>
+				<span><a href="notes.page">Data Notes</a></span>
+				<span><a href="monthly.page">Monthly Dashboard</a></span>
+				<span><a href="quarterly.page" class="A_current">Quarterly Count</a></span>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Quarterly Nighttime Counts</h1>
+
+			<p>HOME-STAT's new nighttime counts—one each in Spring, Summer and Fall—supplement the official, federally mandated winter <a href="http://www1.nyc.gov/site/dhs/outreach/hope.page">Homeless Outreach Population Estimate (HOPE) Count</a> to provide a more complete, year-round picture of street homelessness in the City.</p>
+			<p>The <time class="HS_quarter">Fall 2016</time> quarterly count took place on <time id="HS_quarterStart">Monday, November 7</time>, from midnight to 4 a.m.</p>
+		</section>
+
+		<section class="SECTION_mapHeader">
+			<p>
+				In <time class="HS_quarter">-</time>, there were
+			</p>
+			<h1 id="HS_total">-</h1>
+			<h2>people observed citywide who were street homeless.</h2>
+		</section>
+
+		<section id="SECTION_map">
+			<iframe frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" hidden="hidden"></iframe>
+		</section>
+
+		<section id="SECTION_stats">
+			<article>
+				<header>
+					<div>Location</div>
+					<div>Number</div>
+				</header>
+				<div>
+					<div>Bronx</div>
+					<div class="HS_bronx">-</div>
+				</div>
+				<div>
+					<div>Brooklyn</div>
+					<div class="HS_brooklyn">-</div>
+				</div>
+				<div>
+					<div>Manhattan</div>
+					<div class="HS_manhattan">-</div>
+				</div>
+				<div>
+					<div>Queens</div>
+					<div class="HS_queens">-</div>
+				</div>
+				<div>
+					<div>Staten Island</div>
+					<div class="HS_staten">-</div>
+				</div>
+				<div>
+					<div>Select High Density Subway Stations and Trains (Citywide)</div>
+					<div class="HS_train">-</div>
+				</div>
+			</article>
+		</section>
+
+		<section id="SECTION_statsMobile">
+			<article>
+				<div>
+					<h1 class="HS_bronx">-</h1>
+					<h2>Bronx</h2>
+				</div>
+				<div>
+					<h1 class="HS_brooklyn">-</h1>
+					<h2>Brooklyn</h2>
+				</div>
+				<div>
+					<h1 class="HS_manhattan">-</h1>
+					<h2>Manhattan</h2>
+				</div>
+				<div>
+					<h1 class="HS_queens">-</h1>
+					<h2>Queens</h2>
+				</div>
+				<div>
+					<h1 class="HS_staten">-</h1>
+					<h2>Staten Island</h2>
+				</div>
+			</article>
+		</section>
+
+		<section class="SECTION_text">
+			<h1>Methodology</h1>
+
+			<p>The quarterly count was conducted from midnight to 4 a.m. Visual observations were made from vehicles and on foot. Observers canvassed streets and sidewalks, end-of-line subway trains and select subway stations, select parks and other open spaces, and select transit hubs.</p>
+			<p>The quarterly count was performed primarily by the Department of Homeless Services’ (DHS) contracted street outreach providers with assistance from staff and volunteers from DHS, the Department of Parks and Recreation, the New York Police Department’s Transit Bureau and Crisis Outreach and Support Unit (formerly referred to as the Homeless Outreach Unit), the Human Resources Administration, and the Mayor’s Office of Operations.</p>
+			<p>Observers took into account the appearance, behavior, and conditions of individuals to assess whether a person might be street homeless. They recorded information on the location and observable demographics and conditions of people they assessed as street homeless. Observers did not interview or interact with individuals.</p>
+		</section>
+
+		<section class="SECTION_text">
+			<h1>Archive</h1>
+			<p>
+				<a href="http://www1.nyc.gov/site/operations/projects/HomeStat-Quarterly-Spring-2016.page">Spring 2016 Quarterly Count</a><br />
+				<a href="http://www1.nyc.gov/site/operations/projects/HomeStat-Quarterly-Summer-2016.page">Summer 2016 Quarterly Count</a><br />
+				<a href="http://www1.nyc.gov/site/operations/projects/HomeStat-Quarterly.page">Fall 2016 Quarterly Count</a>
+			</p>
+		</section>
+
+		<footer>
+			<article>
+				<h1>
+					If you see someone in need of
+					<div>homeless assistance,</div>
+					<a href="http://www.nyc.gov/311">call 311</a> or <a href="http://www1.nyc.gov/nyc-resources/service/5460/311-mobile-app">use the 311 Mobile App</a>.
+				</h1>
+
+				<h2>
+					Give the exact location of the individual and time you observed them. Provide details about the person’s appearance (such as age, gender, ethnicity, clothing, physical condition), behavior, and other distinguishing characteristics.
+				</h2>
+
+				<p>
+					The Department of Homeless Services’ contracted <a href="/site/dhs/outreach/street-outreach.page">Street Outreach Teams</a> will attempt to locate the person, based on the information you provide, within an average of 1 hour.
+					The Street Outreach Teams will offer services such as a bed in transitional housing and assistance in gathering vital documents, applying for public benefits, and receiving permanent housing.
+				</p>
+
+				<h2>
+					In case of emergency, dial 911.
+				</h2>
+
+				<div>
+					<a href="http://www1.nyc.gov/311/index.page"><img src="img/311.png" /></a>
+					<img src="img/DHS.png" />
+				</div>
+			</article>
+
+			<a href="https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9">Download the 311 data on NYC Open Data</a>
+		</footer>
+	</main>
+</body>
+</html>

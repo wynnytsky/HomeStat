@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<link href="Dashboard.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$.getJSON("https://a002-oom03.nyc.gov/homestat/stats", function (data) {
+				paint(data);
+			});
+
+			/*
+			$.getJSON("stats", function (data) {
+				paint(data);
+			});
+
+			paint([
+				{
+					"type": "Homeless Encampment",
+					"days": 29,
+					"sum_total": 196,
+					"sum_yesterday": 14,
+					"avg": 7
+				},
+				{
+					"type": "Homeless Person Assistance",
+					"days": 31,
+					"sum_total": 731,
+					"sum_yesterday": 32,
+					"avg": 24
+				},
+				{
+					"type": "Scout",
+					"days": 13,
+					"sum_total": 305,
+					"sum_yesterday": 0,
+					"avg": 23
+				}
+			]);
+			*/
+		});
+
+		function paint(data) {
+			$.each(data, function (i, item) {
+
+				var id = "";
+				switch (item.type) {
+					case "Homeless Encampment": id = "encampment"; break;
+					case "Homeless Person Assistance": id = "assistance"; break;
+					case "Scout": id = "scout"; break;
+				}
+
+				$("#DIV_" + id + " .DIV_StatData > div:first-child > div:nth-child(2)").text(item.sum_yesterday);
+				$("#DIV_" + id + " .DIV_StatData > div:last-child > div:nth-child(2)").text(item.avg);
+
+			});
+			
+			$("#SPAN_Yesterday").html(moment().subtract(1, 'day').format("dddd MMMM Do, YYYY"));
+		}
+
+
+	</script>
+</head>
+<body>
+	<div id="DIV_dashboard">
+		<h1>Daily Dashboard</h1>
+		<p>
+			The following map shows public and city canvasser reports of individuals
+			who many be homeless and in need of services. This is not a count of
+			street homeless people (multiple requests could be made about one
+			person and a single request could cover more than one person).
+		</p>
+		<div id="DIV_map"></div>
+		Data for <span id="SPAN_Yesterday">Monday February 9th, 2016</span>
+
+		<div id="DIV_StatContainer">
+			<div id="DIV_scout">
+				Scout <bullet></bullet>
+				<div class="DIV_StatData">
+					<div>
+						<div>Daily total</div>
+						<div></div>
+						<div></div>
+					</div>
+					<div><div></div></div>
+					<div>
+						<div>30 day avg</div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="DIV_assistance">
+				Homeless Assitance <bullet></bullet>
+				<div class="DIV_StatData">
+					<div>
+						<div>Daily total</div>
+						<div></div>
+						<div></div>
+					</div>
+					<div><div></div></div>
+					<div>
+						<div>30 day avg</div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="DIV_encampment">
+				Homeless Encampment <bullet></bullet>
+				<div class="DIV_StatData">
+					<div>
+						<div>Daily total</div>
+						<div></div>
+						<div></div>
+					</div>
+					<div><div></div></div>
+					<div>
+						<div>30 day avg</div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

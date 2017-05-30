@@ -1,0 +1,37 @@
+﻿/*
+#MAIN_homestat img {
+	width:unset;
+}
+
+#MAIN_homestat a {
+	color:#213D6D;
+}
+*/
+
+#MAIN_homestat em {
+	font-weight:bold;
+	font-style:normal;
+}
+#MAIN_homestat > header {
+	margin-bottom:2em;
+}
+#MAIN_homestat > section * {
+	line-height:1.3em;
+}
+
+#MAIN_homestat > section > article {
+	margin-top:1.7em;
+	margin-bottom:1.7em;
+}
+#MAIN_homestat > section > article:first-of-type > h1 {
+	color:black;
+}
+#MAIN_homestat > section > article > h1 {
+	color:#034EA1;
+	line-height:1.4em;
+	margin-bottom:0px;
+	font-size:1.5em;
+}
+#MAIN_homestat > section > article > p:first-of-type {
+	margin-top:0px;
+}

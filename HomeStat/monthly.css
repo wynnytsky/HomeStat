@@ -1,0 +1,212 @@
+﻿#MAIN_homestat > section > * {
+	font-family: HelveticaNeue-Bold, Helvetica, Arial, sans-serif;
+}
+
+/***************************** INTRO *****************************/
+/*
+#MAIN_homestat section:last-of-type header a {
+	color:white;
+}
+#MAIN_homestat section:last-of-type header a:hover {
+	color:#2A3D6C;
+}
+*/
+#MAIN_homestat section:first-of-type {
+	margin-bottom:1em;
+}
+
+#MAIN_homestat section:first-of-type h1 {
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:1.8em;
+	line-height:1.2em;
+}
+#MAIN_homestat section:first-of-type h2 {
+	margin-top:.1em;
+	color:#22AEE7;
+	font-size:1.2em;
+	font-weight:bold;
+}
+#MAIN_homestat section:first-of-type p {
+	line-height:1.4em;
+	font-size:0.9em;
+	margin-bottom:0px;
+}
+
+
+
+#MAIN_homestat .SECTION_BlueBox {
+	background-color:#00B2E8;/*#14AFE7;*/
+	color:white;
+	padding:15pt;
+}
+#MAIN_homestat .SECTION_BlueBox h1 {
+	color:#2F2279;
+	line-height:1.3em;
+	font-size:3em;
+	margin-top:0px;
+	padding-top:0px;
+	margin-bottom:0px;
+}
+#MAIN_homestat .SECTION_BlueBox h2 {
+	margin-top:0px;
+	font-size:1.6em;
+}
+#MAIN_homestat .SECTION_BlueBox time {
+	white-space:nowrap;
+}
+#MAIN_homestat .SECTION_BlueBox p:first-of-type {
+	margin-bottom:0px;
+}
+
+#MAIN_homestat .SECTION_BlueBox p {
+	line-height:1.4em;
+	font-size:0.9em;
+}
+
+#MAIN_homestat .SECTION_BlueBox a {
+	color: white;
+}
+#MAIN_homestat .SECTION_BlueBox a:hover {
+	color:#25237A;
+}
+
+/*************************** DONUTS ****************************/
+#SECTION_donuts {
+	margin-top:1em;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+#SECTION_donuts > article > h1 {
+	font-size:1em;
+	margin-bottom:0;
+}
+#SECTION_donuts > article > div {
+	width: 250px;
+}
+
+/*************************** VETERANS ****************************/
+#SECTION_vet {
+	margin-bottom:3em;
+}
+#SECTION_vet > h1 {
+	font-size:1em;
+	line-height:1.5em;
+	margin:0px;
+}
+#SECTION_vet > article {
+	display:flex;
+}
+#SECTION_vet > article > div {
+	font-weight:bold;
+	font-size: 1.4em;
+}
+#SECTION_vet > article > div {
+	padding:15pt;
+	background-color:#C5E8FA;
+}
+#SECTION_vet > article > div:first-of-type {
+	flex:2;
+	color:#2F2279;
+}
+#SECTION_vet > article > div:last-of-type {
+	flex:1;
+	color:white;
+	background-color:#214BA0;
+	text-align:center;
+}
+
+/*************************** HOME ****************************/
+#SECTION_home {
+	margin-bottom:5em;
+}
+
+#SECTION_home > h1 {
+	font-size:1em;
+	margin-top:1em;
+	margin-bottom:0em;
+	color:#22AEE7;
+	font-weight:bold;
+}
+
+#SECTION_home > h2 {
+	font-size:1em;
+	margin-top:0em;
+	margin-bottom:0em;
+	line-height:1.5em;
+}
+
+#SECTION_home > p {
+	line-height:1.4em;
+	font-size:0.9em;
+	margin-bottom:0px;
+}
+
+#SECTION_home article {
+	display:flex;
+	flex-wrap:wrap;
+	color:white;
+	margin-bottom:1.75em;
+/*	width:530px;*/
+}
+
+#SECTION_home article > div {
+	flex:1;
+	min-width:150px;
+/*	min-width:14em;*/
+	min-height:90px;
+/*	border:1px solid red;*/
+	padding:.9em;
+	line-height:1.3;
+	font-size:.9em;
+}
+
+#SECTION_home article > div > h1 {
+	font-size:2.2em;
+	padding:0px;
+	margin:0px;
+	margin-bottom:.1em;
+	line-height:1em;
+}
+
+#SECTION_home article > #DIV_streetTile {
+	background-color:#25237A;
+}
+#SECTION_home article > #DIV_houseTile {
+	background-color:#9F2882;
+}
+#SECTION_home article > #DIV_otherTile {
+	background-color:#E44398;
+}
+
+#SECTION_home article > #DIV_placedOtherTile {
+    background-color:#024DA1;
+}
+#SECTION_home article > #DIV_placedTranTile {
+	background-color:#9F2882;
+}
+#SECTION_home article > #DIV_placedPermTile {
+	background-color:#E44398;
+}
+
+/*
+#ARTICLE_homeTiles > div:nth-of-type(1) {
+	background-color:#2F2279;
+}
+#ARTICLE_homeTiles > div:nth-of-type(2) {
+	background-color:#9F2A80;
+}
+#ARTICLE_homeTiles > div:nth-of-type(3) {
+	background-color:#E44595;
+}
+#ARTICLE_homeTiles > div:nth-of-type(4) {
+	background-color:#214BA0;
+}
+#ARTICLE_homeTiles > div:nth-of-type(5) {
+	background-color:#2A3D6C;
+}
+#ARTICLE_homeTiles > div:nth-of-type(6) {
+	background-color:#22AEE7;
+}
+*/

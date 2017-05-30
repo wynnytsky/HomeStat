@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<title></title>
+<!--<base href="http://www1.nyc.gov/site/operations/projects/homestat/homestat/" />-->
+
+	<!--REMOVE IN TEAMSITE-->
+	<link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<link href="Common.css"	rel="stylesheet" />	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+	<link href="Map.css"	rel="stylesheet" />	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+	<link href="Daily.css"	rel="stylesheet" />	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.2.min.js" type="text/javascript"></script>-->			<!--LATEST VERSION-->
+	<script src="https://www1.nyc.gov/assets/home/js/libs/jquery-1.9.1.js" type="text/javascript"></script>	<!--TEAMSITE VERSION-->
+
+	<!--TEAMSITE LOADS CARTO DIRECTLY FROM CDN-->
+	<!--
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+	<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+	-->
+
+	<!--WHILE TESTING ON https://a002, A LOCAL COPY OF CARTO IS LOADED TO DEFEAT HTTPS=>HTTP CALLS-->
+	<link rel="stylesheet" href="cartodb.css" />
+	<script src="cartodb.js"></script>
+
+	<!--USED ONLY FOR FORMATTING THE DATE OF 311 SNAPSHOT-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
+	
+	<!--40297d00-d99e-11e5-b48a-0ecd1babdde5-->
+	<script>var hs_cartoId = '9c56b9c9-04fa-4052-98b9-d8f440028aa4';</script>
+	<script src="Common.js" type="text/javascript"></script>	<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+	<script src="Daily.js" type="text/javascript"></script>		<!--In teamsite, prefix with https://a002-oom03.nyc.gov/homestat2/-->
+</head>
+<body>
+
+	<main id="MAIN_homestat">
+
+		<header>
+			<h1>HOME-STAT</h1>
+			<img src="img/HomeStat.png" />
+			<nav>
+				<!--/site/operations/projects/homestat/-->
+				<span><a href="index.page">Home</a></span>
+				<span><a href="daily.page" class="A_current">Daily Dashboard</a></span>
+				<span><a href="weekly.page">Weekly Count</a></span>
+			</nav>
+			<nav>
+				<span><a href="notes.page">Data Notes</a></span>
+				<span><a href="monthly.page">Monthly Dashboard</a></span>
+				<span><a href="quarterly.page">Quarterly Count</a></span>
+			</nav>
+		</header>
+
+<!--[if IE]>
+<h1>Best viewed in Chrome, Firefox, Safari, or IE10+</h1>
+<div style="display:none">
+<![endif]-->
+
+		<section>
+			<h1>
+				311 requests <span class="cloaked">for <time>February 29, 2016</time></span>
+			</h1>
+
+			<p>
+				Anyone can <a href="http://www1.nyc.gov/nyc-resources/service/1851/homeless-person-outreach-assistance">use 311</a> to request outreach assistance for people who may be homeless and living on the streets or in other public places.
+				Note that multiple requests could be made about one person and that a single request could cover more than one person.
+			</p>
+			<br />
+			<p>
+				Extreme cold weather will affect the volume of 311 service requests from both the public and the HOME-STAT canvassing team. For more information, see <a href="Notes.page">Data Notes</a>.
+			</p>
+			<!--
+			<div id="DIV_OldData">
+				Due to a server issue, data for 311 requests on <time>5-3-2016</time> are not yet available. This page will be updated as soon as possible.
+			</div>
+			-->
+		</section>
+
+		<section id="SECTION_map">
+			<iframe frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" hidden="hidden"></iframe>
+		</section>
+
+		<section id="SECTION_stats">
+
+			<article>
+				<header>
+					<div>Source</div>
+					<div>Manhattan</div>
+					<div>Citywide</div>
+				</header>
+				<div class="DIV_public">
+					<div>
+						Public 311 Requests for Outreach Assistance
+					</div>
+
+					<div class="STAT_manhattan">-</div>
+					<div class="STAT_citywide">-</div>
+				</div>
+				
+				<div class="DIV_canvas">
+					<div>
+						Requests from<br />
+						HOME-STAT Canvassers
+						<p>HOME-STAT canvassers cover Manhattan from Canal St. to 145 St. and select hot spots in the other boroughs during the day.</p>
+					</div>
+					
+					<div class="STAT_manhattan">-</div>
+					<div class="STAT_citywide">-</div>
+				</div>
+
+				<div class="DIV_camp">
+					<div>
+						Public 311 Requests routed to NYPD
+						<p>Related to persons repeatedly occupying the same location or setting up temporary dwellings.</p>
+					</div>
+
+					<div class="STAT_manhattan">-</div>
+					<div class="STAT_citywide">-</div>
+				</div>
+			</article>
+
+			<article>
+				<header>
+					<h1>
+						Supplemental Data
+					</h1>
+
+					<p>
+						In addition to 311, other organizations collect data about the number of people who may be street homeless.
+					</p>
+				</header>
+
+				<div>
+					<div>
+						<div>Select Public</div>
+						<div>Outdoor Spaces</div>
+						<p>Including parks and business improvement districts.</p>
+					</div>
+					<div class="SPACE_outdoor">-</div>
+					<div></div>
+				</div>
+
+				<div>
+					<div>
+						<div>Select Public</div>
+						<div>Indoor Spaces</div>
+						<p>Including public libraries and transit hubs.</p>
+					</div>
+					<div class="SPACE_indoor">-</div>
+					<div></div>
+				</div>
+			</article>
+
+		</section>
+
+		<section id="SECTION_statsMobile">
+
+			<article>
+				<div class="DIV_public">
+					<h2>Public 311 Requests for Outreach Assistance</h2>
+
+					<h1 class="STAT_manhattan">-</h1>
+					<h2>Manhattan</h2>
+
+					Citywide:
+					<span class="STAT_citywide">-</span>
+				</div>
+
+				<div class="DIV_canvas">
+					<h2>Requests from HOME-STAT Canvassers</h2>
+					HOME-STAT canvassers cover Manhattan from Canal St. to 145 St. and select hot spots in the other boroughs during the day.
+
+					<h1 class="STAT_manhattan">-</h1>
+					<h2>Manhattan</h2>
+
+					Citywide:
+					<span class="STAT_citywide">-</span>
+				</div>
+
+				<div class="DIV_camp">
+					<h2>Public 311 Requests routed to NYPD</h2>
+					Related to persons repeatedly occupying the same location or setting up temporary dwellings.
+
+					<h1 class="STAT_manhattan">-</h1>
+					<h2>Manhattan</h2>
+
+					Citywide:
+					<span class="STAT_citywide">-</span>
+				</div>
+			</article>
+
+			<article>
+				<header>
+					<h3>Supplemental Data</h3>
+					In addition to 311, other organizations collect data about the number of people who may be street homeless.
+				</header>
+
+				<div>
+					<h2>Select Public Outdoor Spaces</h2>
+					<h1 class="SPACE_outdoor">-</h1>
+					<h2>Manhattan</h2>
+				</div>
+
+				<div>
+					<h2>Select Public Indoor Spaces</h2>
+					<h1 class="SPACE_indoor">-</h1>
+					<h2>Manhattan</h2>
+				</div>
+			</article>
+
+		</section>
+
+<!--[if IE]>
+</div>
+<![endif]-->
+
+		<footer>
+			<article>
+				<h1>
+					If you see someone in need of
+					<div>homeless assistance,</div>
+					<a href="http://www.nyc.gov/311">call 311</a> or <a href="http://www1.nyc.gov/nyc-resources/service/5460/311-mobile-app">use the 311 Mobile App</a>.
+				</h1>
+
+				<h2>
+					Give the exact location of the individual and time you observed them. Provide details about the person’s appearance (such as age, gender, ethnicity, clothing, physical condition), behavior, and other distinguishing characteristics.
+				</h2>
+
+				<p>
+					The Department of Homeless Services’ contracted <a href="/site/dhs/outreach/street-outreach.page">Street Outreach Teams</a> will attempt to locate the person, based on the information you provide, within an average of 1 hour.
+					The Street Outreach Teams will offer services such as a bed in transitional housing and assistance in gathering vital documents, applying for public benefits, and receiving permanent housing.
+				</p>
+
+				<h2>
+					In case of emergency, dial 911.
+				</h2>
+
+				<div>
+					<a href="http://www1.nyc.gov/311/index.page"><img src="img/311.png" /></a>
+					<img src="img/DHS.png" />
+				</div>
+			</article>
+
+			<a href="https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9">Download the 311 data on NYC Open Data</a>
+		</footer>
+
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HomeStat">
+  <DataContextMoniker Name="/HomeStatDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1a418a8f-a719-4e7d-9691-da4daf9024b1" absoluteBounds="0.5, 0.5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/HomeStatDataContext/geo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffbede0d-3b1a-43ba-820f-58c165ad3fa0" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

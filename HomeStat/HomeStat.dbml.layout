@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HomeStat">
+  <DataContextMoniker Name="/HomeStatDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dff6cdc1-1770-43c0-9454-e26561b34b55" absoluteBounds="0.5, 0.5, 1.375, 1.7535424804687505">
+      <DataClassMoniker Name="/HomeStatDataContext/daily_geo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6471f28-6fbe-4d4a-8e05-bd0f81b21740" absoluteBounds="0.515, 0.96, 1.3450000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17457226-aaf3-407c-be93-699fd198a669" absoluteBounds="0.5, 2.5, 1.375, 1.7535424804687505">
+      <DataClassMoniker Name="/HomeStatDataContext/monthly_geo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f417626-0898-4789-8217-938858c62039" absoluteBounds="0.515, 2.96, 1.3450000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd59e1a6-58c6-4fec-b302-67dd55b6a974" absoluteBounds="2.125, 0.5, 1.375, 0.93180582682291679">
+      <DataClassMoniker Name="/HomeStatDataContext/vw_daily_fig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bcd5c8e-83ac-4e42-89aa-b97d43cac9a9" absoluteBounds="2.14, 0.96, 1.3450000000000002, 0.37180582682291669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="677b3151-7f20-490c-9a1a-55468e27adf8" absoluteBounds="2.125, 2.5, 1.375, 0.93180582682291679">
+      <DataClassMoniker Name="/HomeStatDataContext/vw_monthly_fig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="188e67e5-a6d1-45bd-b64c-5d31c1f62d01" absoluteBounds="2.14, 2.96, 1.3450000000000002, 0.37180582682291669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11f6dcd4-49dc-4fb7-9b8c-45c0c0c39f5c" absoluteBounds="3.75, 0.5, 2, 2.24658447265625">
+      <DataClassMoniker Name="/HomeStatDataContext/geo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28109d0c-83fc-4e37-8ce7-073a6c48c036" absoluteBounds="3.7649999999999997, 0.96, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

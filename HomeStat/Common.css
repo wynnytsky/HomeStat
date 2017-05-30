@@ -1,0 +1,256 @@
+﻿.cloaked {
+	visibility:hidden;
+}
+
+/* override /assets/home/css/css-min/global.css:1232 */
+.container {
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+/* override /assets/home/css/pages/agencies/inside.css:28 */
+.about-main-image #MAIN_homestat img {
+	width:inherit;
+/*
+	width:initial;
+	width:unset;
+*/
+}
+
+body {
+	font-size: 100%;
+	font-weight: lighter;
+/*	line-height: 1.5em;*/
+}
+
+#MAIN_homestat {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+/*	min-width:320px;*/
+}
+
+@media only screen and (max-width:768px) {
+	#MAIN_homestat {
+		padding-left:20pt;
+		padding-right:20pt;
+	}
+}
+
+#MAIN_homestat * {
+	line-height:1em;
+}
+
+#MAIN_homestat footer {
+	/*
+	NOT SUPPORTED BY IE
+	background-color:none;
+	*/
+	background-color:transparent;
+
+	padding:0px;
+}
+
+#MAIN_homestat a {
+	text-decoration:underline;
+/*	color:#4431B0;
+	color:#2F2279;
+	color:#333333;
+*/
+	color:#2A3D6C;
+	font-weight:bold;
+}
+#MAIN_homestat a:hover {
+	color:#034EA1;
+}
+
+/***************************** HEADER *****************************/
+
+#MAIN_homestat > header {
+	margin-bottom: 1em;
+}
+#MAIN_homestat > header > h1 {
+	margin-bottom:0.2em;
+	color:black;
+}
+
+#MAIN_homestat > header > nav {
+	display:flex;
+	margin-top:.8em;
+	justify-content:space-between;
+}
+#MAIN_homestat > header > nav > span {
+	flex:1;
+	text-align:center;
+}
+#MAIN_homestat > header > nav > span:first-of-type {
+	text-align:left;
+}
+#MAIN_homestat > header > nav > span:last-of-type {
+	text-align:right;
+}
+
+#MAIN_homestat > header > nav > span > a {
+	font-size: .9em;
+	font-weight: bold;
+	padding:.3em;
+}
+#MAIN_homestat > header > nav > span > a.A_current {
+	background-color:yellow;
+}
+
+
+/***************************** FOOTER *****************************/
+/*footer, first link*/
+@media only screen and (max-width:480px) {
+	#MAIN_homestat > footer > nav {
+		text-align: center;
+	}
+
+		#MAIN_homestat > footer > p > span {
+			display: block;
+		}
+}
+
+#MAIN_homestat > footer > nav {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-content: space-between;
+}
+
+#MAIN_homestat > footer > nav > a {
+		max-width:220px;
+		flex:1;
+		padding: .9em;
+		color: white;
+		background-color: #00B2E8;
+		border-radius: 3px;
+		text-decoration: none;
+	}
+
+#MAIN_homestat > footer > nav > a:first-of-type {
+	margin-right: 1em;
+}
+#MAIN_homestat > footer > nav > a:last-of-type {
+	margin-left: 1em;
+}
+
+	#MAIN_homestat > footer > nav > a:hover {
+		text-decoration: underline;
+	}
+
+/*more info see data notes*/
+#MAIN_homestat > footer > p {
+	margin-top: .7em;
+}
+#MAIN_homestat > footer > p > a {
+	color: black;
+	font-size: 1em;
+	font-weight: normal;
+}
+#MAIN_homestat > footer > p > a:hover {
+	color: #034EA1;
+	font-weight: bold;
+}
+
+
+
+
+
+
+#MAIN_homestat > footer > article {
+	margin-top: 5em;
+
+	background-color: #00B2E8; /*#5CB7DC;*/
+	color: #25237A;
+	padding: 1.875em;
+	/*	padding:15pt;*/
+}
+
+/*H1*/
+#MAIN_homestat > footer > article > h1 {
+	color:white;
+	font-size:1.9em;
+	font-weight:bold;
+
+	line-height:1.1em;
+	margin-top:0px;
+}
+#MAIN_homestat > footer > article > h1 > div {
+	color:#2F2279;
+}
+#MAIN_homestat > footer > article > h1 > a {
+	color:white;
+}
+#MAIN_homestat > footer > article > h1 > a:hover {
+	color:#25237A;
+}
+@media only screen and (max-width:600px) {
+	#MAIN_homestat > footer > article > h1 > div {
+		display:inline;
+	}
+}
+
+/*H2*/
+#MAIN_homestat > footer > article > h2 {
+	font-size:1.3em;
+	margin-top:.8em;
+	margin-bottom:.8em;
+	line-height:1.2em;
+}
+
+/*P*/
+#MAIN_homestat > footer > article > p {
+	font-size:1em;
+	margin-bottom:1em;
+	line-height:1.3em;
+}
+#MAIN_homestat > footer > article > p > a {
+	color:#2F2279;
+}
+#MAIN_homestat > footer > article > p > a:hover {
+	color:white;
+}
+
+/*images*/
+#MAIN_homestat > footer > article > div {
+	display:flex;
+	flex-direction:row-reverse;
+	align-items:flex-end;
+}
+#MAIN_homestat > footer > article > div > a > img {
+	height:2.25em;
+}
+#MAIN_homestat > footer > article > div > img {
+	height:2.25em;	
+	margin-right:1em;
+}
+
+/*download*/
+#MAIN_homestat > footer > a {
+	display:block;
+	margin-top:2em;
+}
+
+
+@media only screen and (max-width:480px) {
+	#MAIN_homestat > footer > article {
+		padding: 1.275em;
+	}
+	#MAIN_homestat > footer > article > h1 {
+		font-size:1.5em;
+	}
+	#MAIN_homestat > footer > article > h2 {
+		font-size:1.15em;
+	}
+
+	#MAIN_homestat > footer > article > div > img {
+		max-width:301px;
+		max-height:34px;
+		width:85%!important;
+		height:85%!important;
+	}
+	#MAIN_homestat > footer > article > div > a > img {
+		width:30px;
+		height:30px;
+	}
+}

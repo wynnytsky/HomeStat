@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<link href="Index.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
+	<script src="Index.js" type="text/javascript"></script>
+</head>
+<body>
+	<main id="MAIN_dashboard">
+		
+		<section id="SECTION_intro">
+			<pre>{homestat logo here}</pre>
+			
+			<header><span>DAILY DASHBOARD</span></header>
+
+			<div class="cloaked">
+				On <time>February 29, 2016</time> there were:
+				<h1>33</h1>
+			</div>
+			
+			<h2>
+				total 311 requests for
+				Homeless Assistance
+			</h2>
+
+			Members of the public and HOME-STAT field canvassers report individuals who
+			may be homeless and in need of services using 311. This is not a count of street
+			homeless people. Multiple requests could be made about one person and a single
+			request could cover more than one person
+		</section>
+
+		<!--		
+		<iframe src="https://nycdoitt.cartodb.com/u/jperazzo/viz/40297d00-d99e-11e5-b48a-0ecd1babdde5/embed_map" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe>
+		-->
+		<iframe frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe>
+
+		<div id="DIV_metrics">
+			<section id="SECTION_report">
+				<header>Outreach Assistance Public Report</header>
+
+				<table>
+					<tr>
+						<td class="cloaked">24</td>
+						<td>daily total</td>
+					</tr>
+					<tr>
+						<td class="cloaked">30</td>
+						<td>daily average*</td>
+					</tr>
+				</table>
+			</section>
+
+			<section id="SECTION_canvas">
+				<header>Outreach Assistance Field Canvassers</header>
+
+				<table>
+					<tr>
+						<td class="cloaked">5</td>
+						<td>daily total</td>
+					</tr>
+					<tr>
+						<td class="cloaked">10</td>
+						<td>daily average*</td>
+					</tr>
+				</table>
+			</section>
+
+			<section id="SECTION_camp">
+				<header>Encampment / Chronic</header>
+
+				<table>
+					<tr>
+						<td class="cloaked">4</td>
+						<td>daily total</td>
+					</tr>
+					<tr>
+						<td class="cloaked">5</td>
+						<td>daily average*</td>
+					</tr>
+				</table>
+			</section>
+		</div>
+		*30-day rolling average
+
+		<section id="SECTION_extro">
+			<header>
+				If you see someone in need of
+				<h1>homeless assistance,</h1>
+				call 311 or use the 311 Mobile App.
+			</header>
+
+			<h2>
+				Give the exact location of the individual and time you
+				observed them. Describe what they look like, what they are
+				doing and the condition that is prompting your request.
+			</h2>
+
+			<p>
+				The Department of Homeless Services Outreach Providers will attempt to locate
+				the person in need of assistance and offer them services including transportation
+				to shelter, a bed in transitional housing, assistance in gathering vital documents,
+				applying for public benefits, and receiving permanent housing.
+			</p>
+
+			<h2>
+				In case of emergency, dial 911.
+			</h2>
+
+			<footer>
+				<pre>{311 logo here}</pre>
+			</footer>
+		</section>
+
+		<a id="A_download" href="">Download the data on NYC Open Data</a>
+	</main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿.cloaked
+{
+	visibility:hidden;
+}
+#MAIN_dashboard
+{
+	font-family:Arial, Helvetica, sans-serif;
+	width:550px;
+	font-size:1.1em;
+}
+#MAIN_dashboard section
+{
+	padding: 1em 1.3em 1em 1.3em;
+	color:white;
+}
+#MAIN_dashboard section pre
+{
+	padding:.3em;
+
+	background-color:lightblue;
+	display:inline-block;
+}
+#MAIN_dashboard iframe
+{
+	height:520px;
+	width:100%;
+}
+
+
+#SECTION_intro
+{
+	background-color:#22AEE7;
+}
+#SECTION_intro header span
+{
+	color:black;
+	background-color:#FAF317;
+	padding:.1em .3em .1em .3em;
+	font-weight:bold;
+	font-size:0.9em;
+}
+#SECTION_intro header
+{
+	margin-bottom:1em;
+}
+#SECTION_intro h1
+{
+	color:#2F2279;
+	font-size:4.2em;
+	margin:0px;
+}
+#SECTION_intro h2
+{
+	font-size:1.6em;
+	width:70%;
+	margin-top:0px;
+	margin-bottom:1.5em;
+}
+
+
+#DIV_metrics
+{
+	position:relative;
+	top:-5px;
+}
+#DIV_metrics section
+{
+	display:flex;
+}
+	#DIV_metrics header
+	{
+		flex:1;
+		font-size:1.4em;
+		font-weight:bold;
+	}
+	#DIV_metrics table
+	{
+		flex:1;
+	}
+
+#DIV_metrics table td:first-child
+{
+	font-weight:bold;
+	font-size:2em;
+	text-align:right;
+	padding-right:.2em;
+	min-width:1.2em;
+}
+
+
+#SECTION_report
+{
+	background-color:#2F2279;
+}
+#SECTION_canvas
+{
+	background-color:#22AEE7;
+}
+#SECTION_camp
+{
+	background-color:#F8B61E;
+}
+
+
+#MAIN_dashboard #SECTION_extro
+{
+	background-color:#22AEE7;
+	color:#2F2279;
+	margin-top:3em;
+	margin-bottom:2em;
+}
+#SECTION_extro header
+{
+	color:white;
+	font-size:1.7em;
+	font-weight:bold;
+}
+#SECTION_extro h1
+{
+	font-size:1em;
+	font-weight:bolder;
+	color:#2F2279;
+	margin:0px;
+}
+#SECTION_extro h2
+{
+	font-size:1.2em;
+}
+#SECTION_extro footer
+{
+	text-align:right;
+}

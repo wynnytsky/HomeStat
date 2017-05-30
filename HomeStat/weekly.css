@@ -1,0 +1,53 @@
+﻿/***************************** INTRO *****************************/
+
+#MAIN_homestat section:first-of-type a,
+#MAIN_homestat section:last-of-type header a {
+	color:white;
+}
+#MAIN_homestat section:first-of-type a:hover,
+#MAIN_homestat section:last-of-type header a:hover {
+	color:#213D6D;
+}
+
+#MAIN_homestat > section:first-of-type > h1.cloaked {
+	white-space:nowrap;
+}
+
+#MAIN_homestat section:first-of-type {
+	background-color:#00B2E8;/*#14AFE7;*/
+	color:white;
+	padding:15pt;
+}
+#MAIN_homestat section:first-of-type h1 {
+	line-height:1.2em;
+	font-size:1.7em;
+	margin-top:0px;
+}
+#MAIN_homestat section:first-of-type time {
+	white-space:nowrap;
+}
+#MAIN_homestat section:first-of-type p {
+	line-height:1.4em;
+	font-size:0.9em;
+	margin-bottom:0px;
+}
+
+#DIV_OldData {
+	margin-top:1em;
+	display:none;
+	color:yellow;
+	text-align:center;
+}
+
+
+/***************************** MAP FOOTER *****************************/
+
+#SECTION_stats       > article > div.DIV_public > div.STAT_manhattan,
+#SECTION_statsMobile > article > div.DIV_public {
+	background-color: #FCB414;
+}
+
+/*Why isn't this needed in Daily and Monthly?!??!*/
+#SECTION_stats > article > header {
+	padding: 0px !important;
+}

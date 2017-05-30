@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<title></title>
+<!--<base href="http://www1.nyc.gov/site/operations/projects/" />-->
+
+	<!--REMOVE IN TEAMSITE-->
+	<link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<link href="HomeStat-Daily.css" rel="stylesheet" />				<!--https://a002-oom03.nyc.gov/homestat/-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>					LATEST VERSION-->
+	<script src="https://www1.nyc.gov/assets/home/js/libs/jquery-1.9.1.js" type="text/javascript"></script>	<!--TEAMSITE VERSION-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
+	<script src="HomeStat-Daily.js" type="text/javascript"></script>	<!--https://a002-oom03.nyc.gov/homestat/-->
+
+	<!--
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+	<script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+	-->
+
+	<link rel="stylesheet" href="cartodb.css" />
+	<script src="cartodb.js"></script>
+</head>
+<body>
+<!--[if lt IE 11]>
+	<h1>Please use Edge, Chrome, Safari, or Firefox</h1>
+	<div style="display:none">
+<![endif]-->
+
+	<main id="MAIN_dashboard">
+
+		<header>
+			<h1>HOME-STAT</h1>
+
+			<nav>
+				<a href="HomeStat.page">Home</a>
+				<a href="HomeStat-Daily.page" class="A_current">Daily Dashboard</a>
+				<a href="javascript:alert('Coming soon')">Data Notes</a>
+			</nav>
+
+		</header>
+
+		<section id="SECTION_intro">
+
+			<div class="cloaked">
+				On <time>February 29, 2016</time> there were:
+				<h1>33</h1>
+			</div>
+
+			<h2>
+				Total 311 requests for Homeless Outreach Assistance
+			</h2>
+
+			Anyone can <a href="http://www1.nyc.gov/nyc-resources/service/1851/homeless-person-outreach-assistance">use 311</a> to request outreach assistance for people who may be homeless and living on the streets or in other public places. Note that multiple requests could be made about one person and that a single request could cover more than one person.
+		</section>
+
+		<div id="DIV_map"></div>
+
+		<div id="DIV_metrics">
+			<section>
+				<header></header>
+
+				<div>Manhattan</div>
+				<div>Citywide</div>
+			</section>
+
+			<section id="SECTION_public">
+				<header>Public</header>
+
+				<div class="cloaked">
+					<div>-</div>
+				</div>
+				<div class="cloaked">
+					<div>-</div>
+				</div>
+			</section>
+
+			<section id="SECTION_canvas">
+				<header>HOME-STAT<br />Canvassers</header>
+
+				<div class="cloaked">
+					<div>-</div>
+				</div>
+				<div class="cloaked">
+					<div>-</div>
+				</div>
+			</section>
+
+			<section id="SECTION_parks">
+				<header>NYC Parks</header>
+
+				<div class="cloaked">
+					<div>-</div>
+				</div>
+				<div class="cloaked">
+					<div>-</div>
+				</div>
+			</section>
+
+			<!--
+			<section id="SECTION_camp">
+				<header>Encampment / Chronic</header>
+
+				<div class="cloaked">
+					<div>123</div>
+					daily total
+				</div>
+				<div class="cloaked">
+					<div>123123</div>
+					daily total
+				</div>
+			</section>
+			-->
+			<div class="DIV_moreInfo">
+				For more information, see <a href="javascript:alert('Coming soon')">Data Notes</a>.
+			</div>
+		</div>
+
+		<div id="DIV_supplemental">
+			<h3>Supplemental Data</h3>
+			In addition to 311, other agencies and organizations collect data about the number of
+			people who may be street homeless.
+
+			<section>
+				<header></header>
+				<div>Manhattan</div>
+			</section>
+			
+			<section>
+				<header>
+					<div>Select Business Improvement Districts (BIDs)</div>
+				</header>
+				<div>
+					<div>4</div>
+				</div>
+			</section>
+
+			<section>
+				<header>
+					<div>Select Indoor Spaces</div>
+				</header>
+				<div>
+					Coming soon
+				</div>
+			</section>
+
+			<section>
+				<header>
+					<div>Major Transit Hubs</div>
+				</header>
+				<div>
+					Coming soon
+				</div>
+			</section>
+
+			<div class="DIV_moreInfo">
+				For more information, see <a href="javascript:alert('Coming soon')">Data Notes</a>.
+			</div>
+		</div>
+
+		<section id="SECTION_extro">
+			<header>
+				If you see someone in need of
+				<h1>homeless assistance,</h1>
+				<a href="http://www.nyc.gov/311">call 311</a> or <a href="/nyc-resources/service/5460/311-mobile-app">use the 311 Mobile App</a>.
+			</header>
+
+			<h2>
+				Give the exact location of the individual and time you observed them. Provide details about the person’s appearance (such as age, gender, ethnicity, clothing, physical condition), behavior, and other distinguishing characteristics.
+			</h2>
+
+			<p>
+				The Department of Homeless Services’ contracted <a href="/site/dhs/outreach/street-outreach.page">Street Outreach Teams</a> will attempt to locate the person, based on the information you provide, within an average of 1 hour.
+				The Street Outreach Teams will offer services such as a bed in transitional housing and assistance in gathering vital documents, applying for public benefits, and receiving permanent housing.
+			</p>
+
+			<h2>
+				In case of emergency, dial 911.
+			</h2>
+
+			<div id="DIV_extro_footer">
+				<img src="https://a002-oom03.nyc.gov/homestat/311_icon.png" />
+				<img src="https://a002-oom03.nyc.gov/homestat/NYClogo_MOO_DHS_Lockup_knockout.png" />
+			</div>
+		</section>
+
+	</main>
+
+<!--[if lt IE 11]>
+	</div>
+<![endif]-->
+</body>
+</html>

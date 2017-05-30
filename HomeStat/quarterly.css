@@ -1,0 +1,104 @@
+/***************************** INTRO *****************************/
+
+#MAIN_homestat section:first-of-type {
+	margin-bottom: 1em;
+}
+
+#MAIN_homestat section:first-of-type p {
+	margin-top:.7em;
+}
+
+#MAIN_homestat section:first-of-type h1 {
+	line-height:1.2em;
+	font-size:1.6em;
+	margin-top:0px;
+}
+#MAIN_homestat section:first-of-type time {
+	white-space:nowrap;
+}
+#MAIN_homestat section p {
+	line-height:1.4em;
+/*	font-size:0.9em;*/
+	margin-bottom:0px;
+}
+
+#MAIN_homestat .SECTION_mapHeader {
+	background-color: #00B2E8; /*#14AFE7;*/
+	color: white;
+	padding: 15pt;
+}
+
+#MAIN_homestat .SECTION_mapHeader h1 {
+	color: #2F2279;
+	line-height: 1.3em;
+	font-size: 3em;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+
+#MAIN_homestat .SECTION_mapHeader h2 {
+	margin-top: 0px;
+	font-size: 1.6em;
+}
+
+#MAIN_homestat .SECTION_mapHeader time {
+	white-space: nowrap;
+}
+
+#MAIN_homestat .SECTION_mapHeader p:first-of-type {
+	margin-bottom: 0px;
+}
+
+#MAIN_homestat .SECTION_mapHeader p {
+	line-height: 1.4em;
+	font-size: 0.9em;
+}
+
+#MAIN_homestat .SECTION_mapHeader a {
+	color: white;
+}
+
+	#MAIN_homestat .SECTION_mapHeader a:hover {
+		color: #25237A;
+	}
+
+/***************************** MAP FOOTER *****************************/
+/*Why is this only needed by Quarterly?!??!*/
+#SECTION_stats > article > header {
+	padding: 0px!important;
+}
+
+#SECTION_stats > article > * > div {
+	padding: 15pt;
+}
+#SECTION_stats > article > div > div {
+	min-height:unset;
+}
+
+/*2nd column background colors*/
+#SECTION_stats > article > div:nth-of-type(2n+1) > div:last-of-type {
+	background-color: #2F2279;
+}
+#SECTION_stats > article > div:nth-of-type(2n+2) > div:last-of-type {
+	background-color: #00B2E8;
+}
+
+#SECTION_statsMobile > article > div:nth-of-type(2n+1) {
+	background-color: #2F2279;
+}
+
+#SECTION_statsMobile > article > div:nth-of-type(2n+2) {
+	background-color: #00B2E8;
+}
+
+/***************************** METHODOLOGY *****************************/
+.SECTION_text {
+	margin-top: 3em;
+}
+
+.SECTION_text > p {
+	font-size: 0.9em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}

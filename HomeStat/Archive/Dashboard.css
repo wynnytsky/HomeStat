@@ -1,0 +1,104 @@
+﻿bullet
+{
+	float:left;
+	border-radius:50%;
+	height:.7em;
+	width:.7em;
+	margin-top: .2em;
+	margin-right: .5em;
+	background-color: pink;
+}
+
+#DIV_dashboard
+{
+	font-family: Arial;
+	width:550px;
+}
+
+#DIV_map
+{
+	height:550px;
+	border:1px solid black;
+}
+
+#DIV_dashboard h1
+{
+	font-size:26px;
+}
+
+/*
+	level 1: 3 divs in a row (red, orange, blue)
+*/
+#DIV_StatContainer
+{
+	margin-top:1em;
+	display:flex;
+}
+	#DIV_StatContainer > div
+	{
+		margin:5px;
+		flex:1;
+		flex-direction:row;
+		font-size:.9em;
+	}
+
+/*
+	level 2: 3 divs in a row (total, white vert bar, avg)
+*/
+	.DIV_StatData
+	{
+		color: white;
+		display:flex;
+		height:70px;
+		padding:4px;
+		margin-top:.2em;
+		text-align:center;
+	}
+
+	#DIV_scout .DIV_StatData,
+	#DIV_scout bullet
+	{
+		background-color:#FF6600;
+	}
+	#DIV_assistance .DIV_StatData,
+	#DIV_assistance bullet
+	{
+		background-color:#FFC000;
+	}
+	#DIV_encampment .DIV_StatData,
+	#DIV_encampment bullet
+	{
+		background-color:#4F81BD;
+	}
+
+	.DIV_StatData > div:first-child,
+	.DIV_StatData > div:last-child
+	{
+		flex:1;
+
+		display:flex;
+		flex-direction:column;
+	}
+	.DIV_StatData > div:nth-child(2)
+	{
+		padding:4px;
+		width:2px;
+		height:100%;
+	}
+	.DIV_StatData > div:nth-child(2) > div
+	{
+		background-color:white;
+		height:90%;
+	}
+
+/*
+	level 3: 3 divs in a column (title, metric, blank spacer)
+*/
+	.DIV_StatData > div > div
+	{
+		flex:1;
+	}
+	.DIV_StatData > div > div:nth-child(2)
+	{
+		font-size:2em;
+	}

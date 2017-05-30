@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<title></title>
+<!--<base href="http://www1.nyc.gov/site/operations/projects/homestat/" />-->
+
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+
+	<script src="https://www1.nyc.gov/assets/home/js/libs/jquery-1.9.1.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+	<script type="text/javascript">
+
+		function paintNum() {
+			var sql = new cartodb.SQL({ user: 'jperazzo' });
+
+			var _sql = `
+		 SELECT sum(case ny_boroughs.boroname when 'Manhattan' then 1 else 0 end) as manhattan,
+				count(*) as citywide, max(created) as created
+		 FROM   jperazzo.table_6enbb7qew6asblzr3qdhkw, ny_boroughs
+		 WHERE  ST_INTERSECTS(jperazzo.table_6enbb7qew6asblzr3qdhkw.the_geom, ny_boroughs.the_geom)`;
+
+/*
+			var _sql = `
+select * from hs_weekly_stats`;
+
+			var _sql = `
+select * from hs_weekly_stats3`;
+*/
+
+			sql.execute(_sql)
+				.done(function (data) {
+				//	alert(data.rows.length);
+					
+					var row = data.rows[0];
+
+					$("#TD_manhattan").text(row.manhattan);
+					$("#TD_citywide").text(row.citywide);
+					$("time").html(moment(row.created).format("dddd, MMMM Do, YYYY"));
+				})
+				.error(function (errors) {
+					console.log(errors);
+				});
+
+		}
+
+		window.onload = function () {
+
+			$(document).ready(function () {
+
+				paintNum();
+
+			});
+		}
+
+	</script>
+
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Manhattan</td>
+			<td id="TD_manhattan">--</td>
+		</tr>
+		<tr>
+			<td>Citywide</td>
+			<td id="TD_citywide">--</td>
+		</tr>
+	</table>
+</body>

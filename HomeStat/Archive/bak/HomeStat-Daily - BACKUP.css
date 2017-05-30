@@ -1,0 +1,323 @@
+﻿.cloaked {
+	visibility:hidden;
+}
+
+/***************************** COMMON *****************************/
+
+/* override global.css:1232 */
+.container {
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+
+body {
+	font-size: 100%;
+	font-weight: lighter;
+/*	line-height: 1.5em;*/
+}
+
+#MAIN_homestat {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	color:#2F2279;
+}
+#MAIN_homestat * {
+	line-height:1em;
+}
+
+#MAIN_homestat footer {
+	/*
+	NOT SUPPORTED BY IE
+	background-color:none;
+	*/
+	background-color:transparent;
+
+	padding:0px;
+}
+
+#MAIN_homestat a {
+	text-decoration:underline;
+	color:#4431B0;
+	font-weight:bold;
+}
+#MAIN_homestat a:hover {
+	color:#034EA1;
+}
+
+/*
+#MAIN_homestat img {
+	width:unset;
+	max-width:unset;
+	height:unset;
+	vertical-align:unset;
+}
+*/
+
+/***************************** HEADER *****************************/
+
+#MAIN_homestat > header > h1 {
+	margin-bottom:0.2em;
+}
+#MAIN_homestat > header > nav {
+	display:flex;
+	margin-top:.3em;
+	margin-bottom: 1em;
+}
+#MAIN_homestat > header > nav > a {
+	font-size: .9em;
+	font-weight: bold;
+	margin-right:2em;
+	padding:.3em;
+}
+#MAIN_homestat > header > nav > a.A_current {
+	background-color:yellow;
+}
+
+
+/***************************** INTRO *****************************/
+
+#MAIN_homestat section:first-of-type a,
+#MAIN_homestat section:last-of-type header a {
+	color:white;
+}
+#MAIN_homestat section:first-of-type a:hover,
+#MAIN_homestat section:last-of-type header a:hover {
+	color:#213D6D;
+}
+
+
+#MAIN_homestat section:first-of-type {
+	background-color:#14AFE7;
+	color:white;
+	padding:15pt;
+}
+#MAIN_homestat section:first-of-type h1 {
+	line-height:1.2em;
+	font-size:1.7em;
+	margin-top:0px;
+}
+#MAIN_homestat section:first-of-type time {
+	white-space:nowrap;
+}
+#MAIN_homestat section:first-of-type p {
+	line-height:1.4em;
+	font-size:0.9em;
+	margin-bottom:0px;
+}
+
+
+
+/***************************** MAP *****************************/
+
+#MAIN_homestat #SECTION_map {
+	height: 35vh;
+	min-height: 400px;
+	width:100%;
+}
+
+
+/***************************** STATS *****************************/
+
+#SECTION_stats {
+	min-width:480px;
+}
+#SECTION_stats > article {
+	margin-bottom:2em;
+}
+#SECTION_stats > article:first-of-type > header,
+#SECTION_stats > article > div {
+	display:flex;
+}
+	#SECTION_stats > * {
+		font-weight:bold;
+	}
+	#SECTION_stats > article > header {
+		font-size: 1.2em;
+	}
+	#SECTION_stats > article > div {
+		font-size: 1.6em;
+	}
+
+#SECTION_stats > article > * {
+	border-bottom:1px solid white;
+}
+#SECTION_stats > article > * > div,
+#SECTION_stats > article:last-of-type > header {
+	padding:15pt;
+}
+#SECTION_stats > article > header {
+	color:white;
+	background-color:#1AB3E7;
+}
+#SECTION_stats > article > div {
+	background-color:#C5E8FA;
+}
+
+
+/*style first header*/
+#SECTION_stats > article:first-of-type > header {
+	align-items:flex-end;
+}
+#SECTION_stats > article:first-of-type > header > div {
+	padding-bottom:.2em;
+}
+
+
+/*2nd column background colors*/
+#SECTION_stats > article > div:nth-of-type(1) > div:nth-of-type(2) {
+	background-color:#2F2279;
+}
+#SECTION_stats > article > div:nth-of-type(2) > div:nth-of-type(2) {
+	background-color:#22AEE7;
+}
+#SECTION_stats > article > div:nth-of-type(3) > div:nth-of-type(2) {
+	background-color:#F8B61E;
+}
+
+/*2nd+3rd cols need to be flex in order to center vertically*/
+#SECTION_stats > article > div > div {
+	min-height:65pt;
+	display:flex;
+	align-items:center;
+}
+/*remove flex from 1st column so P is below lable*/
+#SECTION_stats > article > div > div:first-of-type {
+	display:block;
+}
+#SECTION_stats > article > div > div:first-of-type > p {
+	font-weight:normal;
+	font-size:.6em;
+	margin-top:.5em;
+	margin-bottom:0px;
+
+	/* required for IE */
+	width:100%;
+}
+
+
+/*set column proportions in both header and data rows*/
+#SECTION_stats > article > * > div:nth-of-type(1) {
+	flex:7;
+}
+#SECTION_stats > article > * > div:nth-of-type(2) {
+	flex:4;
+	text-align:center;
+}
+#SECTION_stats > article > * > div:nth-of-type(3) {
+	flex:2;
+	text-align:center;
+}
+
+/*style numeric cells*/
+#SECTION_stats > article > div > div:nth-of-type(2) {
+	font-size:2.6em;
+	color:white;
+	justify-content:space-around;
+}
+#SECTION_stats > article > div > div:nth-of-type(3) {
+	justify-content:space-around;
+}
+
+/* stats #1 */
+
+	/*public, manhattan*/
+	#SECTION_stats > article > div:nth-of-type(1) > div:nth-of-type(2) {
+		/*background-color:#312F74;*/
+	}
+
+	/*canvas, source*/
+	#SECTION_stats > article > div:nth-of-type(2) > div:nth-of-type(1) {
+		flex-direction:column;
+		align-items:flex-start;
+	}
+	/*canvas, manhattan*/
+	#SECTION_stats > article > div:nth-of-type(2) > div:nth-of-type(2) {
+		/*background-color:#1AB3E7;*/
+	}
+
+/* stats #2 */
+	#SECTION_stats > article:last-of-type > header > * {
+		line-height:1.1em;
+	}
+	#SECTION_stats > article:last-of-type > header > h1 {
+		margin-top:0px;
+		font-size:1.3em;
+	}
+	#SECTION_stats > article:last-of-type > header > p {
+		font-size:0.8em;
+		font-weight:normal;
+		margin-bottom:0px;
+	}
+
+
+/***************************** FOOTER *****************************/
+
+#MAIN_homestat > footer {
+	margin-top:1em;
+}
+#MAIN_homestat > footer > article {
+	background-color:#00b2e8;
+	color:#25237A;
+	padding:15pt;
+}
+
+/*H1*/
+#MAIN_homestat > footer > article > h1 {
+	color:white;
+	font-size:1.9em;
+	font-weight:bold;
+
+	line-height:1.1em;
+}
+#MAIN_homestat > footer > article > h1 > div {
+	color:#2F2279;
+}
+#MAIN_homestat > footer > article > h1 > a {
+	color:white;
+}
+#MAIN_homestat > footer > article > h1 > a:hover {
+	color:#25237A;
+}
+@media only screen and (max-width:600px) {
+	#MAIN_homestat > footer > article > h1 > div {
+		display:inline;
+	}
+}
+
+/*H2*/
+#MAIN_homestat > footer > article > h2 {
+	font-size:1.3em;
+	margin-top:.8em;
+	margin-bottom:.8em;
+	line-height:1.2em;
+}
+
+/*P*/
+#MAIN_homestat > footer > article > p {
+	font-size:1em;
+	margin-bottom:1em;
+	line-height:1.3em;
+}
+#MAIN_homestat > footer > article > p > a:hover {
+	color:white;
+}
+
+/*images*/
+#MAIN_homestat > footer > article > div {
+	display:flex;
+	flex-direction:row-reverse;
+	align-items:flex-end;
+}
+#MAIN_homestat > footer > article > div > img:first-child {
+	height:2.25em;
+}
+#MAIN_homestat > footer > article > div > img:last-child {
+	height:2.25em;	
+	margin-right:1em;
+}
+
+/*download*/
+#MAIN_homestat > footer > a {
+	display:block;
+	margin-top:2em;
+}

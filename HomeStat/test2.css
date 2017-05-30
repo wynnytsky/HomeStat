@@ -1,0 +1,16 @@
+﻿body > div {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+/*	width:530px;*/
+	width:auto;
+	border:2px solid red;
+}
+
+body > div > div {
+	background-color:palegoldenrod;
+	border:1px solid tan;
+	width:20vw;
+	flex:1;
+	height:90px;
+}
