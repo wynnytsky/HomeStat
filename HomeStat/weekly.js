@@ -23,20 +23,21 @@ select * from hs_weekly_stats2`;
 	*/
 
 	var _sql = `
- SELECT count(*) as manhattan,
-        count(*) as citywide,
-		max(created) as created
- FROM   jperazzo.table_6enbb7qew6asblzr3qdhkw`;
+	SELECT count(*) as manhattan,
+         count(*) as citywide,
+ 		max(created) as created
+  FROM   jperazzo.table_6enbb7qew6asblzr3qdhkw
+ `;
 
 	sql.execute(_sql)
 		.done(function (data) {
 		//	console.log(data.rows);
 			var row = data.rows[0];
 
-			$(".STAT_manhattan_").text(row.manhattan);
-			$(".STAT_citywide_").text(row.citywide);
+			$(".STAT_manhattan").text(row.manhattan);
+			$(".STAT_citywide").text(row.citywide);
 
-			$("#MAIN_homestat > section:first-of-type span time").html(moment(row.created).format("dddd, MMMM Do, YYYY"));
+			$("#MAIN_homestat > section:first-of-type span time").html(moment(row.created).subtract(6, 'days').format("dddd, MMMM Do, YYYY"));
 			$("#MAIN_homestat > section:first-of-type span").toggleClass('cloaked');
 		})
 		.error(function (errors) {
