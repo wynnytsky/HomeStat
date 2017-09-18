@@ -37,7 +37,7 @@ select * from hs_weekly_stats2`;
 			$(".STAT_manhattan").text(row.manhattan);
 			$(".STAT_citywide").text(row.citywide);
 
-			$("#MAIN_homestat > section:first-of-type span time").html(moment(row.created).subtract(5, 'days').format("dddd, MMMM Do, YYYY"));
+			$("#MAIN_homestat > section:first-of-type span time").html(moment(row.created).subtract(6, 'days').format("dddd, MMMM Do, YYYY"));
 			$("#MAIN_homestat > section:first-of-type span").toggleClass('cloaked');
 		})
 		.error(function (errors) {
